@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>AulaViva — Proyecto</title>
+
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link
+        rel="stylesheet"
+        href="styles.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-custom container-fluid px-4 px-lg-5">
+
+    <div class="d-flex align-items-center gap-3">
+
+        <div class="brand-logos">
+
+            <div class="logo-chip school">
+                T
+            </div>
+
+            <div class="logo-chip project">
+                4
+            </div>
+
+        </div>
+
+
+        <a
+            class="navbar-brand brand mb-0"
+            href="index.php">
+
+            Tecnica<span class="accent">N4</span>
+
+        </a>
+
+    </div>
+
+
+    <div class="d-flex align-items-center gap-3">
+
+        <a
+            href="index.php"
+            class="nav-link-custom text-decoration-none">
+
+            ← Volver al monitoreo
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
+
+<main class="container dashboard">
+
+
+    <!-- CARGANDO -->
+
+    <div
+        id="cargandoProyecto"
+        class="text-center py-5">
+
+        <h3>
+            Cargando proyecto...
+        </h3>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROYECTO
+    ================================================== -->
+
+    <section
+        id="contenidoProyecto"
+        style="display:none;">
+
+
+        <!-- ENCABEZADO -->
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <div class="eyebrow">
+
+                    <span class="pulse-dot"></span>
+
+                    Proyecto de monitoreo
+
+                </div>
+
+
+                <h1
+                    id="nombreProyecto"
+                    class="dashboard-title">
+
+                    —
+
+                </h1>
+
+
+                <p
+                    id="descripcionProyecto"
+                    class="dashboard-subtitle">
+
+                    —
+
+                </p>
+
+            </div>
+
+
+            <div class="live-status">
+
+                <span class="pulse-dot"></span>
+
+                <div>
+
+                    <strong id="estadoProyecto">
+                        —
+                    </strong>
+
+                    <small>
+                        Estado del proyecto
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             INFORMACIÓN
+        ================================================== -->
+
+        <section class="dashboard-info">
+
+
+            <div class="info-box">
+
+                <div class="info-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <strong>
+                        Materia
+                    </strong>
+
+                    <p id="materiaProyecto">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Curso
+                    </strong>
+
+                    <p id="cursoProyecto">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <strong>
+                        Responsable
+                    </strong>
+
+                    <p id="responsableProyecto">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-icon">
+                    🧑‍💻
+                </div>
+
+                <div>
+
+                    <strong>
+                        Creado por
+                    </strong>
+
+                    <p id="usuarioProyecto">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SENSORES ACTUALES
+        ================================================== -->
+
+        <section>
+
+            <div class="projects-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Datos actuales
+                    </div>
+
+                    <h2>
+                        Sensores
+                    </h2>
+
+                    <p>
+                        Últimos valores registrados.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- MQ5 -->
+
+                <div class="col-md-4">
+
+                    <article class="sensor-card">
+
+                        <div class="sensor-card-top">
+
+                            <div class="sensor-icon">
+                                🔥
+                            </div>
+
+                            <span
+                                id="estadoMQ5"
+                                class="sensor-status">
+
+                                Esperando
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="sensor-info">
+
+                            <p class="sensor-label">
+                                SENSOR MQ-5
+                            </p>
+
+
+                            <h2
+                                id="actualMQ5"
+                                class="sensor-value">
+
+                                —
+
+                            </h2>
+
+
+                            <p class="sensor-name">
+                                Gases combustibles
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- DHT11 -->
+
+                <div class="col-md-4">
+
+                    <article class="sensor-card">
+
+                        <div class="sensor-card-top">
+
+                            <div class="sensor-icon">
+                                🌡️
+                            </div>
+
+                            <span
+                                id="estadoDHT11"
+                                class="sensor-status">
+
+                                Esperando
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="sensor-info">
+
+                            <p class="sensor-label">
+                                SENSOR DHT11
+                            </p>
+
+
+                            <div class="sensor-measure">
+
+                                <span class="measure-label">
+                                    Temperatura
+                                </span>
+
+                                <h2
+                                    id="actualDHTTemp"
+                                    class="sensor-value sensor-value-small">
+
+                                    —
+
+                                </h2>
+
+                            </div>
+
+
+                            <div class="sensor-measure">
+
+                                <span class="measure-label">
+                                    Humedad
+                                </span>
+
+                                <h2
+                                    id="actualDHTHum"
+                                    class="sensor-value sensor-value-small">
+
+                                    —
+
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- DS18B20 -->
+
+                <div class="col-md-4">
+
+                    <article class="sensor-card">
+
+                        <div class="sensor-card-top">
+
+                            <div class="sensor-icon">
+                                🌡️
+                            </div>
+
+                            <span
+                                id="estadoDS18"
+                                class="sensor-status">
+
+                                Esperando
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="sensor-info">
+
+                            <p class="sensor-label">
+                                SENSOR DS18B20
+                            </p>
+
+
+                            <h2
+                                id="actualDS18"
+                                class="sensor-value">
+
+                                —
+
+                            </h2>
+
+
+                            <p class="sensor-name">
+                                Temperatura de precisión
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ÚLTIMA MEDICIÓN
+        ================================================== -->
+
+        <section class="create-project-section">
+
+            <div>
+
+                <div class="eyebrow">
+                    Historial
+                </div>
+
+                <h2>
+                    Mediciones registradas
+                </h2>
+
+                <p>
+                    Los datos se organizan según las
+                    mediciones recibidas de los sensores.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Última medición
+                </strong>
+
+                <p id="ultimaMedicion">
+                    —
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TABLA
+        ================================================== -->
+
+        <section class="projects-section">
+
+
+            <div class="projects-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Historial
+                    </div>
+
+
+                    <h2>
+                        Mediciones de sensores
+                    </h2>
+
+
+                    <p>
+                        Registro de los datos recibidos
+                        durante el monitoreo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="table-responsive">
+
+
+                <table
+                    class="table align-middle">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Fecha
+                            </th>
+
+                            <th>
+                                Hora
+                            </th>
+
+                            <th>
+                                MQ-5
+                            </th>
+
+                            <th>
+                                DHT11 Temp.
+                            </th>
+
+                            <th>
+                                DHT11 Hum.
+                            </th>
+
+                            <th>
+                                DS18B20
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="tablaMediciones">
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+
+            <div
+                id="sinMediciones"
+                class="empty-projects"
+                style="display:none;">
+
+
+                <div class="empty-projects-icon">
+                    📊
+                </div>
+
+
+                <h3>
+                    Todavía no hay mediciones
+                </h3>
+
+
+                <p>
+                    Las mediciones aparecerán cuando
+                    la API comience a enviar datos.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ERROR
+    ================================================== -->
+
+    <div
+        id="errorProyecto"
+        class="empty-projects"
+        style="display:none;">
+
+
+        <div class="empty-projects-icon">
+            ⚠️
+        </div>
+
+
+        <h3>
+            No se pudo cargar el proyecto
+        </h3>
+
+
+        <p id="mensajeError">
+            —
+        </p>
+
+
+        <a
+            href="index.php"
+            class="btn btn-verde">
+
+            Volver
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer dashboard-footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Tecnica 4
+            </span>
+
+            <span>
+                AulaViva · Monitoreo en tiempo real
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script src="proyecto.js?v=3"></script>
+
+
+</body>
+
+</html>
