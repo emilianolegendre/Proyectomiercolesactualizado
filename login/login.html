@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Iniciar sesión — AulaViva</title>
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+
+            <!-- MARCA -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    T/4
+                </div>
+
+                <div>
+
+                    <h1>
+                        AulaViva
+                    </h1>
+
+                    <span>
+                        Monitoreo inteligente
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="login-header">
+
+                <h2>
+                    Bienvenido de nuevo
+                </h2>
+
+                <p>
+                    Ingresá a tu cuenta para acceder
+                    al monitoreo del aula.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <form
+                action="login.php"
+                method="POST"
+            >
+
+                <div class="input-group">
+
+                    <label for="id_usuario">
+                        Usuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="id_usuario"
+                        name="id_usuario"
+                        placeholder="Ingresá tu usuario"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Ingresá tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-primary"
+                >
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+
+            <!-- REGISTRO -->
+
+            <div class="login-footer">
+
+                <p>
+                    ¿No tenés una cuenta?
+                </p>
+
+                <a href="../registro/registro.html">
+                    Crear una cuenta
+                </a>
+
+            </div>
+
+
+            <!-- VOLVER -->
+
+            <a
+                href="../home.html"
+                class="back-home"
+            >
+                ← Volver al inicio
+            </a>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
